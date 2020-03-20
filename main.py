@@ -17,8 +17,6 @@ countryName = tk.Entry (master)
 canvas1.create_window(400, 100, window=countryName) 
 
 def search():
-	global date
-	global country
 	df = pd.read_csv('total_deaths.csv')
 	date = df['date']
 	country = df[countryName.get().capitalize()]
